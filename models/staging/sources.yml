@@ -4,6 +4,6 @@ sources:
   - name: production
     tables:
       - name: product
-      - name: produtcategory
+      - name: productcategory
       - name: productdescription
       - name: productsubcategory

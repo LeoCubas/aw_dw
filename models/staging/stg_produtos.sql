@@ -4,8 +4,8 @@ with
             /* Primary key */
             cast(productid as int) as codigo_produto
             /* Columns */
-            , productsubcategoryid as codigo_subcategoria
-            , productmodelid as codigo_modelo
+            , coalesce(cast(productsubcategoryid as int),'') as codigo_subcategoria
+            , cast(productmodelid as int) as codigo_modelo
             , trim(name) as nome_produto
             , productnumber as id_produto
             , makeflag as produto_proprio
