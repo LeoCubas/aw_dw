@@ -7,3 +7,9 @@ sources:
       - name: productcategory
       - name: productdescription
       - name: productsubcategory
+
+  - name: sales
+    tables:
+      - name: salesorderheader
+      - name: salesorderheadersalesreason
+      - name: salesreason
