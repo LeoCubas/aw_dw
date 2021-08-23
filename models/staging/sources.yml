@@ -13,3 +13,12 @@ sources:
       - name: salesorderheader
       - name: salesorderheadersalesreason
       - name: salesreason
+      - name: creditcard
+      - name: salesperson
+  - name: person
+    tables:
+        - name: person
+
+  - name: humanresources
+    tables:
+        - name: employee
