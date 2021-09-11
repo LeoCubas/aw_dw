@@ -17,9 +17,15 @@ sources:
       - name: salesperson
       - name: customer
       - name: store
+      - name: salesterritory
+      - name: salesorderdetail
+
   - name: person
     tables:
         - name: person
+        - name: address
+        - name: countryregion
+        - name: stateprovince
 
   - name: humanresources
     tables:

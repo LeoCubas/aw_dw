@@ -1,0 +1,11 @@
+version: 2
+
+models:
+  - name: fact_pedidos_vendas
+    description: "Tabela de pedidos de vendas - itens."
+    columns:
+      - name: 'codigo_pedido'
+        description: "Chave primária. Composta por: codigo_pedido."
+        tests:
+          - unique:
+              severity: error

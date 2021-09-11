@@ -35,6 +35,6 @@ models:
   adventure_works:
       # Applies to all files under models/example/
       staging:
-          materialized: view
+          materialized: ephemeral
       marts:
-          materialized: view
+          materialized: table
