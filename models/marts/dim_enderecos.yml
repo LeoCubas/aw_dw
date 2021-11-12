@@ -1,10 +1,10 @@
 version: 2
 
 models:
-  - name: fact_pedidos_vendas_itens
-    description: "Tabela de pedidos de vendas - itens."
+  - name: dim_enderecos
+    description: "Tabela de endereços."
     columns:
-      - name: 'sk_pedido_item'
+      - name: 'codigo_endereco'
         tests:
           - unique:
               severity: error

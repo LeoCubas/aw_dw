@@ -4,7 +4,7 @@ with
             /* Primary key */
             cast(productid as int) as codigo_produto
             /* Columns */
-            , coalesce(cast(productsubcategoryid as int),'') as codigo_subcategoria
+            , cast(productsubcategoryid as int) as codigo_subcategoria
             , cast(productmodelid as int) as codigo_modelo
             , trim(name) as nome_produto
             , productnumber as id_produto

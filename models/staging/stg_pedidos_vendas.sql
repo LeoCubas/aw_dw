@@ -9,8 +9,8 @@ with
             , shiptoaddressid as codigo_endereco_frete
             , shipmethodid as codigo_tipo_frete
             , creditcardid as codigo_cartao
-            , orderdate as data_pedido
-            , shipdate as data_envio
+            , cast(orderdate as timestamp) as data_pedido
+            , cast(shipdate as timestamp) as data_envio
             , status as status_pedido
             , case
                 when status = 1

@@ -13,7 +13,7 @@ with
     )
     , joined as (
         select
-            vendedor.codigo_funcionario
+            vendedor.codigo_funcionario as codigo_vendedor
             , pessoa.tipo_pessoa
             , pessoa.nome_completo
             , funcionario.nome_cargo

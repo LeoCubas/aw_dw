@@ -5,7 +5,26 @@ models:
     description: "Tabela de pedidos de vendas - itens."
     columns:
       - name: 'codigo_pedido'
-        description: "Chave primária. Composta por: codigo_pedido."
         tests:
           - unique:
               severity: error
+          - not_null:
+              severity: error
+
+      - name: 'codigo_cliente'
+        tests:
+          - relationships:
+              to: ref('dim_clientes')
+              field: codigo_cliente
+
+      - name: 'codigo_vendedor'
+        tests:
+          - relationships:
+              to: ref('dim_vendedores')
+              field: codigo_vendedor
+
+      - name: 'codigo_cartao'
+        tests:
+          - relationships:
+              to: ref('dim_cartao_credito')
+              field: codigo_cartao

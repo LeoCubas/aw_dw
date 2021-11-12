@@ -30,13 +30,9 @@ with
             , pedido_item.quantidade_pedido
             , pedido_item.preco_unitario
             , pedido_item.desconto_unitario
-            , motivo_venda.nome_motivo_venda
-            , motivo_venda.tipo_motivo_venda
         from pedido
         left join pedido_item
             on pedido.codigo_pedido = pedido_item.codigo_pedido
-        left join motivo_venda
-            on pedido.codigo_pedido = motivo_venda.codigo_pedido
     )
 select *
 from joined

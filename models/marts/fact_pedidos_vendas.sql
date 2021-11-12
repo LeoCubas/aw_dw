@@ -3,10 +3,6 @@ with
         select *
         from {{ ref('stg_pedidos_vendas') }}
     )
-    , motivo_venda as (
-        select *
-        from {{ ref('stg_motivos_vendas') }}
-    )
     , joined as (
         select
             pedido.codigo_pedido
@@ -27,11 +23,7 @@ with
             , pedido.frete
             , pedido.debito_cliente
             , pedido.comentario_pedido
-            , motivo_venda.nome_motivo_venda
-            , motivo_venda.tipo_motivo_venda
         from pedido
-        left join motivo_venda
-            on pedido.codigo_pedido = motivo_venda.codigo_pedido
     )
 select *
 from joined

@@ -1,10 +1,10 @@
 version: 2
 
 models:
-  - name: fact_pedidos_vendas_itens
-    description: "Tabela de pedidos de vendas - itens."
+  - name: dim_motivos_vendas
+    description: "Tabela de Motivos de Vendas."
     columns:
-      - name: 'sk_pedido_item'
+      - name: 'codigo_motivo_venda'
         tests:
           - unique:
               severity: error
